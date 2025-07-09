@@ -1,0 +1,209 @@
+/* Universal Selector: Resets the default margin and padding for all elements 
+   and applies the Dosis font-family across the entire webpage. */
+   * {
+    margin: 0; /* Removes the default outer spacing around elements */
+    padding: 0; /* Removes the default inner spacing inside elements */
+    font-family: 'Dosis', sans-serif; /* Sets the font for all text to Dosis */
+}
+
+/* Hero Section: Centers the main content and limits its width to 80% of the screen */
+.hero {
+    width: 80%; /* Width of the container (80% of the viewport width) */
+    margin: auto; /* Centers the container horizontally */
+}
+
+/* Navbar: Aligns the navigation items and icons */
+.navbar {
+    margin: 30px auto; /* Adds vertical spacing around the navbar and centers it */
+    display: flex; /* Lays out the items in a horizontal row */
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-between; /* Distributes space evenly between items */
+}
+
+/* Navbar Logo: Ensures the logo maintains its proportions and alignment */
+.navbar img {
+    height: 150px; /* Sets the height of the image */
+    width: auto; /* Automatically adjusts the width to maintain aspect ratio */
+    margin-right: auto; /* Pushes the logo to the left side */
+    display: block; /* Ensures proper layout in flexbox */
+}
+
+/* Unordered List: Aligns navigation links to the right */
+ul {
+    flex: 1; /* Allows the ul to take up available space */
+    text-align: right; /* Aligns the list items to the right */
+}
+
+/* List Items: Displays navigation links inline and removes bullet points */
+ul li {
+    display: inline-block; /* Places items in a horizontal row */
+    list-style: none; /* Removes default bullet points */
+    margin: 0 25px; /* Adds horizontal spacing between items */
+}
+
+/* Anchor Tags: Styles the navigation links */
+ul li a {
+    text-decoration: none; /* Removes the default underline on links */
+    color: #000; /* Sets the text color to black */
+    padding: 0 10px; /* Adds horizontal spacing within the links */
+    position: relative; /* Enables positioning of the pseudo-element (::after) */
+}
+
+/* Hover Effect: Adds a colored underline animation */
+ul li a::after {
+    content: ''; /* Creates an empty element for styling */
+    width: 0; /* Initially, the underline width is 0 */
+    height: 10px; /* Sets the height of the underline */
+    background: #8B5E3C; /* Sets the underline color to brown */
+    position: absolute; /* Positions the underline relative to the link */
+    left: 50%; /* Centers the underline horizontally */
+    transform: translateX(-50%); /* Ensures exact centering */
+    top: -55px; /* Positions the underline above the link */
+    transition: 0.5s; /* Smoothly animates the width change */
+}
+
+/* Hover Animation: Expands the underline when the user hovers over the link */
+ul li a:hover::after {
+    width: 100%; /* Expands the underline to match the link's width */
+}
+
+/* Navbar Icons: Styles the icons in the navigation bar */
+.navbar-icons img {
+    height: 25px; /* Sets a uniform size for the icons */
+    margin-left: 40px; /* Adds spacing between icons */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Navbar Icons Container: Lays out icons horizontally */
+.navbar-icons {
+    display: flex; /* Aligns icons in a row */
+    gap: 20px; /* Adds spacing between icons */
+    margin-left: 40px; /* Adds margin to separate icons from the navbar */
+}
+
+/* Banner Section: Positions the left and right columns side by side */
+.banner {
+    display: flex; /* Aligns columns horizontally */
+    margin-top: 80px; /* Adds spacing above the banner */
+}
+
+/* Left and Right Columns: Split the available space equally */
+.left-column, .right-column {
+    flex-basis: 50%; /* Each column takes up 50% of the width */
+}
+
+/* Feature Image in the Right Column: Scales to fit its container */
+.right-column img {
+    width: 100%; /* Ensures the image takes the full width of its column */
+}
+
+/* Search Box: Creates a styled search bar */
+.search-box {
+    width: 45%; /* Sets the width of the search box */
+    display: flex; /* Aligns icon and input horizontally */
+    padding-bottom: 3px; /* Adds spacing below the input field */
+    border-bottom: 1px solid #ddd; /* Creates a subtle bottom border */
+    margin: 10px 0 30px; /* Adds vertical spacing above and below */
+}
+
+/* Search Icon: Sets size and hover behavior */
+.search-box img {
+    height: 25px; /* Sets the icon size */
+    width: 25px; /* Maintains square dimensions */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Search Input Field: Styles the text input */
+.search-box input {
+    width: 100%; /* Allows the input to fill the remaining space */
+    margin-left: 15px; /* Adds spacing between the icon and the input */
+    font-size: 17px; /* Sets the font size */
+    border: 0; /* Removes the default border */
+    outline: none; /* Disables the default focus outline */
+}
+
+/* Typography Styles for Headings */
+.left-column h1 {
+    font-size: 95px; /* Sets a large font size for the main heading */
+}
+
+.left-column h3 {
+    font-size: 30px; /* Sets a smaller font size for the subheading */
+}
+
+/* Highlights text with a specific color */
+span {
+    color: #8B5E3C; /* Brown color for emphasis */
+}
+
+/* Description Text: Adds styling for the paragraph */
+.left-column p {
+    font-size: 16px; /* Sets the text size */
+    color: #999; /* Uses a light gray color */
+    margin: 50px 0; /* Adds vertical spacing above and below */
+}
+
+/* Buttons: Styles the buttons for actions */
+.btn button {
+    padding: 7px 30px; /* Adds inner spacing for better clickability */
+    margin-right: 15px; /* Adds spacing between buttons */
+    outline: none; /* Removes the default focus outline */
+    border: 1px solid #8B5E3C; /* Adds a border with brown color */
+    border-radius: 20px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    color: #8B5E3C; /* Sets the text color */
+    background: transparent; /* Transparent background for a minimal look */
+}
+
+/* Primary Button: Adds a gradient and shadow for emphasis */
+.btn .primary-btn {
+    background: linear-gradient(#8B5E3C, #ceb09e); /* Gradient effect */
+    box-shadow: 0 2px 15px rgba(53, 4, 4, 0.618); /* Adds a shadow */
+    color: #fff; /* Sets the text color to white */
+}
+
+/* Social Icons Container: Centers and styles the icons */
+.social-icons {
+    width: 200px; /* Sets the container width */
+    text-align: center; /* Centers the icons */
+    opacity: 0.4; /* Reduces the opacity for a subtle effect */
+    position: relative; /* Enables positioning of the ::after element */
+    margin-left: 160px; /* Adds spacing from the left */
+}
+
+/* Social Icons Styling */
+.social-icons img {
+    height: 20px; /* Uniform icon size */
+    margin: 0 14px; /* Adds spacing between icons */
+}
+
+/* Footer Divider: Adds a subtle line below the icons */
+.social-icons::after {
+    content: ''; /* Empty content for a styled line */
+    width: 150px; /* Line width */
+    height: 1px; /* Line thickness */
+    background: #000; /* Black line color */
+    position: absolute; /* Positioned relative to the parent container */
+    left: -160px; /* Positions the line on the left */
+    top: 10px; /* Positions the line below the icons */
+}
+
+/* Footer: Styles the bottom section of the page */
+.footer {
+    text-align: center; /* Centers the text */
+    margin-top: 100px; /* Adds spacing above the footer */
+    padding: 30px 0; /* Adds vertical padding */
+    background-color: #f7f7f7; /* Light background for differentiation */
+    font-size: 16px; /* Sets text size */
+    color: #333; /* Dark gray text color */
+}
+
+/* Footer Text Highlights */
+.footer strong {
+    color: #8B5E3C; /* Matches the theme color */
+}
+
+.footer span {
+    font-weight: bold; /* Makes the text bold */
+    color: #6F4E37; /* Slightly darker brown for emphasis */
+}
